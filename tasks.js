@@ -67,38 +67,38 @@
 
 
 
-const students = [
-    {
-        name: "Alice",
-        age: 20,
-        grade: 75,
-        major: "Computer Science"
-    },
-    {
-        name: "Bob",
-        age: 22,
-        grade: 82,
-        major: "Mechanical Engineering"
-    },
-    {
-        name: "Charlie",
-        age: 19,
-        grade: 90,
-        major: "Mathematics"
-    },
-    {
-        name: "Diana",
-        age: 21,
-        grade: 88,
-        major: "Biology"
-    },
-    {
-        name: "Ethan",
-        age: 23,
-        grade: 70,
-        major: "History"
-    }
-];
+// const students = [
+//     {
+//         name: "Alice",
+//         age: 20,
+//         grade: 75,
+//         major: "Computer Science"
+//     },
+//     {
+//         name: "Bob",
+//         age: 22,
+//         grade: 82,
+//         major: "Mechanical Engineering"
+//     },
+//     {
+//         name: "Charlie",
+//         age: 19,
+//         grade: 90,
+//         major: "Mathematics"
+//     },
+//     {
+//         name: "Diana",
+//         age: 21,
+//         grade: 88,
+//         major: "Biology"
+//     },
+//     {
+//         name: "Ethan",
+//         age: 23,
+//         grade: 70,
+//         major: "History"
+//     }
+// ];
 
 // for (let index = 0; index < students.length; index++) {
 //     if (students[index].grade >= 80) {
@@ -108,17 +108,36 @@ const students = [
 //     }
 // }
 
-for (let index = 0; index < students.length; index++) {
-    if (students[index].grade <= 75) {
-        console.log(`${students[index].name} got ${students[index].grade} 'F' from ${students[index].major}`);
+// for (let index = 0; index < students.length; index++) {
+//     if (students[index].grade <= 75) {
+//         console.log(`${students[index].name} got ${students[index].grade} 'F' from ${students[index].major}`);
 
-    } else if (students[index].grade <= 80) {
-        console.log(`${students[index].name} got ${students[index].grade} 'C' from ${students[index].major}`);
+//     } else if (students[index].grade <= 80) {
+//         console.log(`${students[index].name} got ${students[index].grade} 'C' from ${students[index].major}`);
+//     }
+//     else if (students[index].grade <= 85) {
+//         console.log(`${students[index].name} got ${students[index].grade} 'B' from ${students[index].major}`);
+//     }
+//     else if (students[index].grade <= 90) {
+//         console.log(`${students[index].name} got ${students[index].grade} 'A+' from ${students[index].major}`);
+//     }
+// }
+
+
+
+for (let index = 0; index <= 100; index++) {
+    let isPrime = true
+
+    for (let i = 2; i < index; i++) {
+        if (index % i === 0) {
+            isPrime = false
+            break;
+        }
     }
-    else if (students[index].grade <= 85) {
-        console.log(`${students[index].name} got ${students[index].grade} 'B' from ${students[index].major}`);
-    }
-    else if (students[index].grade <= 90) {
-        console.log(`${students[index].name} got ${students[index].grade} 'A' from ${students[index].major}`);
+    if (isPrime) {
+        console.log(`${index}: prime`);
+    } else {
+        console.log(`${index}: non-prime`);
+
     }
 }
