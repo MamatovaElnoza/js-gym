@@ -100,10 +100,25 @@ const students = [
     }
 ];
 
+// for (let index = 0; index < students.length; index++) {
+//     if (students[index].grade >= 80) {
+//         console.log(`${students[index].name} ${students[index].age}, grade: ${students[index].grade} from ${students[index].major}`);
+//     } else {
+//         console.log('failed');
+//     }
+// }
+
 for (let index = 0; index < students.length; index++) {
-    if (students[index].grade >= 80) {
-        console.log(`${students[index].name} ${students[index].age}, grade: ${students[index].grade} from ${students[index].major}`);
-    } else {
-        console.log('failed');
+    if (students[index].grade <= 75) {
+        console.log(`${students[index].name} got ${students[index].grade} 'F' from ${students[index].major}`);
+
+    } else if (students[index].grade <= 80) {
+        console.log(`${students[index].name} got ${students[index].grade} 'C' from ${students[index].major}`);
+    }
+    else if (students[index].grade <= 85) {
+        console.log(`${students[index].name} got ${students[index].grade} 'B' from ${students[index].major}`);
+    }
+    else if (students[index].grade <= 90) {
+        console.log(`${students[index].name} got ${students[index].grade} 'A' from ${students[index].major}`);
     }
 }
