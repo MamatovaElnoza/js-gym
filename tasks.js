@@ -221,19 +221,31 @@ let array = [1, 2, 3, 4, 5, 6, 7, 8]
 // order.customer.loyaltyCard?.points || console.log('No loyalty points');
 
 
+// const subject = {
+//   something : null
+// };
+// console.log(subject);
 
-const subject = {
-  something : null
-};
-console.log(subject);
+// const emailSubject = subject ?? 'A default subject';
 
-const emailSubject = subject ?? 'A default subject';
+// const user = prompt('enter something')
+// console.log(`${subject}: ${user}`);
 
-const user = prompt('enter something')
-console.log(`${subject}: ${user}`);
+// let input = prompt("Enter your username:");
 
-let input = prompt("Enter your username:");
+// let username = (input === '' ? undefined : input) ?? 'user';
 
-let username = (input === '' ? undefined : input) ?? 'user';
+// console.log(username);
 
-console.log(username);
+
+let input = prompt("enter your username:");
+
+if (input === '') {
+  username = undefined;
+} else {
+  username = input;
+}
+const person = {
+  user: username ?? 'user'
+}
+console.log(`username: ${person.user}`);
