@@ -166,56 +166,74 @@ let array = [1, 2, 3, 4, 5, 6, 7, 8]
 
 
 
-
 // Buyurtmachi ismini va telefon raqamini chiqarish. Telefon mavjud bo‘lsa, Customer phone: <raqam> deb chiqsin, aks holda Phone not available. Email bo‘sh bo‘lsa (''), No email provided deb chiqaring (|| dan foydalaning). To‘lov ma’lumotlari mavjud bo‘lmasa (null yoki undefined), Payment pending deb chiqaring (?? dan foydalaning). [Buyurtma jami narxini hisoblang (items massiviga qarab) va Total: $1225 kabi chiqaring (reduce bilan).)]Yuborilgan manzilni tekshiring: shipping.address.city mavjud bo‘lmasa, Delivery address missing deb chiqaring. Bo‘lsa: Shipping to: <city>. Agar shipping.delivered true bo‘lsa: Order has been delivered deb chiqaring. Aks holda hech narsa chiqarilmang. (&& bilan) customer.loyaltyCard?.points qiymatini chiqaring. Mavjud bo‘lmasa: No loyalty points.
-const order = {
-  customer: {
-    name: 'Asal',
-    contact: {
-      phone: '998901112233',
-      email: ''
-    }
-  },
-  items: [
-    { name: 'Laptop', price: 1200 },
-    { name: 'Mouse', price: 25 }
-  ],
-  payment: null,
-  shipping: {
-    address: {
-      city: 'Tashkent',
-      street: 'Yunusabad 5'
-    },
-    delivered: false
-  }
-};
-let er = order.customer.name
-let num = order.customer.contact.phone
-let mail = order.customer.contact.email
-let add = order.shipping.address.city
-let deliver = order.shipping.delivered
 
-console.log(er, num);
+// const order = {
+//   customer: {
+//     name: 'Asal',
+//     contact: {
+//       phone: '998901112233',
+//       email: ''
+//     }
+//   },
+//   items: [
+//     { name: 'Laptop', price: 1200 },
+//     { name: 'Mouse', price: 25 }
+//   ],
+//   payment: null,
+//   shipping: {
+//     address: {
+//       city: 'Tashkent',
+//       street: 'Yunusabad 5'
+//     },
+//     delivered: false
+//   }
+// };
+// let er = order.customer.name
+// let num = order.customer.contact.phone
+// let mail = order.customer.contact.email
+// let add = order.shipping.address.city
+// let deliver = order.shipping.delivered
 
-if (num) {
-    console.log(`Customer phone: ${num}`);
-} else {
-    console.log(`Phone not available`);
-}
+// console.log(er, num);
 
-console.log(`${mail}`|| 'No email provided');
+// if (num) {
+//     console.log(`Customer phone: ${num}`);
+// } else {
+//     console.log(`Phone not available`);
+// }
 
-console.log(order.payment ?? 'Payment pending');
+// console.log(`${mail}`|| 'No email provided');
+
+// console.log(order.payment ?? 'Payment pending');
 
 // let all = order.items.reduce()
 // console.log(all);
 
-if (add) {
-    console.log(`Shipping to: ${add}`);
-} else {
-console.log('Delivery address missing');
-}
+// if (add) {
+//     console.log(`Shipping to: ${add}`);
+// } else {
+// console.log('Delivery address missing');
+// }
 
-deliver && console.log('Order has been delivered');
+// deliver && console.log('Order has been delivered');
 
-order.customer.loyaltyCard?.points || console.log('No loyalty points');
+// order.customer.loyaltyCard?.points || console.log('No loyalty points');
+
+
+
+const subject = {
+  something : null
+};
+console.log(subject);
+
+const emailSubject = subject ?? 'A default subject';
+
+const user = prompt('enter something')
+console.log(`${subject}: ${user}`);
+
+let input = prompt("Enter your username:");
+
+let username = (input === '' ? undefined : input) ?? 'user';
+
+console.log(username);
