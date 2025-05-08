@@ -125,19 +125,41 @@
 
 
 
-for (let index = 0; index <= 100; index++) {
-    let isPrime = true
+// for (let index = 0; index <= 100; index++) {
+//     let isPrime = true
 
-    for (let i = 2; i < index; i++) {
-        if (index % i === 0) {
-            isPrime = false
-            break;
-        }
-    }
-    if (isPrime) {
-        console.log(`${index}: prime`);
-    } else {
-        console.log(`${index}: non-prime`);
+//     for (let i = 2; i < index; i++) {
+//         if (index % i === 0) {
+//             isPrime = false
+//             break;
+//         }
+//     }
+//     if (isPrime) {
+//         console.log(`${index}: prime`);
+//     } else {
+//         console.log(`${index}: non-prime`);
 
-    }
-}
+//     }
+// }
+
+
+
+let array = [1, 2, 3, 4, 5, 6, 7, 8]
+
+// console.log(array.length);
+
+// for (let index = 0; index < array.length; index++) {
+//     console.log(index);
+// }
+
+// console.log(array);
+
+// count = array[0, 1, 2, 3, 4, 5, 6, 7];
+// console.log(count);
+
+// let arr = [10, 20, 30, 40];
+// let count = 0;
+// while (arr[count] !== undefined) {
+//   count++;
+// }
+// console.log(count);
