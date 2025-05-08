@@ -207,8 +207,12 @@ let array = [1, 2, 3, 4, 5, 6, 7, 8]
 
 // console.log(order.payment ?? 'Payment pending');
 
-// let all = order.items.reduce()
-// console.log(all);
+// const nums = [1, 2, 3, 4, 5, 6, 7, 8]
+// const sum = nums.reduce(function (currentSum, currentNumber) {
+//   return currentSum + currentNumber
+// }, 0)
+// const totalPrice = order.items.reduce((sum, item) => sum + item.price, 0);
+// console.log(totalPrice); // Output: 1225
 
 // if (add) {
 //     console.log(`Shipping to: ${add}`);
