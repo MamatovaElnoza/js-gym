@@ -301,3 +301,13 @@ child.addEventListener("click", function () {
     container.classList.toggle("toggled-border");
     grandparent.classList.toggle('toggled-h3')
   });
+
+grandparent.addEventListener('click', function(event){
+  alert('grandparent bubbling');
+},true);
+parent.addEventListener('click', function(event){
+  alert('parent bubbling');
+},true);
+child.addEventListener('click', function(event){
+  alert('child bubbling');
+},true);
