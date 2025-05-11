@@ -1,0 +1,22 @@
+.container {
+    margin: 70px;
+    padding: 30px;
+    border: 5px solid black;
+}
+.parent {
+    background-color: green;
+}
+.child{
+    background-color: red;
+    border: 1px solid rgba(255, 0, 0, 0.672);
+}
+.toggled-border {
+    border: 5px dotted darkred;
+}
+.toggled-h3 {
+    background-color: blue !important;
+  }
+  
+  .toggled-h2 {
+    background-color: orange !important;
+  }

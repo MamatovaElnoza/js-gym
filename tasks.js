@@ -255,38 +255,49 @@ let array = [1, 2, 3, 4, 5, 6, 7, 8]
 // console.log(`username: ${person.user}`);
 
 //homework
-let a = 5;
-let b = a;
-b = 10;
+// let a = 5;
+// let b = a;
+// b = 10;
 
-let arr1 = [1, 2, 3];
-let arr2 = arr1;
-arr2.push(4);
+// let arr1 = [1, 2, 3];
+// let arr2 = arr1;
+// arr2.push(4);
 
-console.log("a:", a);       // 5
-console.log("b:", b);       // 10
-console.log("arr1:", arr1); // 1, 2, 3, 4
-console.log("arr2:", arr2); // 1, 2, 3, 4
+// console.log("a:", a);       // 5
+// console.log("b:", b);       // 10
+// console.log("arr1:", arr1); // 1, 2, 3, 4
+// console.log("arr2:", arr2); // 1, 2, 3, 4
 
-const obj = {
-  username: "Ali",
-  greet: function () {
-    setTimeout(function () {
-      console.log("Hello,", this.username); //since it's a regular function, this refers to the global object, not obj
-    }, 1000);
-  }
-};
+// const obj = {
+//   username: "Ali",
+//   greet: function () {
+//     setTimeout(function () {
+//       console.log("Hello,", this.username); //since it's a regular function, this refers to the global object, not obj
+//     }, 1000);
+//   }
+// };
 
-obj.greet();
+// obj.greet();
 
-console.log("Start"); // first
+// console.log("Start"); // first
 
-setTimeout(() => {
-  console.log("Inside setTimeout"); //third
-}, 0);
+// setTimeout(() => {
+//   console.log("Inside setTimeout"); //third
+// }, 0);
 
-Promise.resolve().then(() => {
-  console.log("Inside Promise"); //fourth
-});
+// Promise.resolve().then(() => {
+//   console.log("Inside Promise"); //fourth
+// });
 
-console.log("End"); //second
+// console.log("End"); //second
+
+const grandparent = document.querySelector('.grandparent');
+container = document.querySelector('.container')
+parent = document.querySelector('.parent');
+child = document.querySelector('.child')
+
+child.addEventListener("click", function () {
+    parent.classList.toggle("toggled-h2");
+    container.classList.toggle("toggled-border");
+    grandparent.classList.toggle('toggled-h3')
+  });
